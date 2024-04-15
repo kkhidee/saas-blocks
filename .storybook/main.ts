@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite'
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
@@ -8,6 +8,19 @@ const config: StorybookConfig = {
     '@storybook/addon-essentials',
     '@chromatic-com/storybook',
     '@storybook/addon-interactions',
+    'storybook-css-modules-preset',
+    {
+      name: '@storybook/addon-postcss',
+      options: {
+        cssLoaderOptions: {
+          importLoaders: 1,
+        },
+        postcssLoaderOptions: {
+          implementation: require('postcss'),
+        },
+      },
+    },
+    '@storybook/addon-styling-webpack',
   ],
   framework: {
     name: '@storybook/react-vite',
@@ -16,5 +29,5 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
-}
-export default config
+};
+export default config;
