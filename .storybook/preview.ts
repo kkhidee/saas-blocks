@@ -9,6 +9,15 @@ const preview: Preview = {
         date: /Date$/i,
       },
     },
+    backgrounds: {
+      default: 'tailwind',
+      values: [
+        {
+          name: 'tailwind',
+          value: '#1A1D2D',
+        },
+      ],
+    },
   },
 };
 

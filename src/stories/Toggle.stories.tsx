@@ -1,16 +1,20 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import Checkbox from '@/components/checkbox';
+import Toggle from '@/components/toggle';
 import { fn } from '@storybook/test';
 
 const meta = {
-  title: 'Example/Checkbox',
-  component: Checkbox,
+  title: 'Example/Toggle',
+  component: Toggle,
   parameters: {
     layout: 'centered',
   },
   tags: ['autodocs'],
-  args: { label: 'Label', onChange: fn() },
-} satisfies Meta<typeof Checkbox>;
+  args: {
+    enabled: true,
+    onChange: fn(),
+    label: 'Label',
+  },
+} satisfies Meta<typeof Toggle>;
 
 export default meta;
 
@@ -18,7 +22,8 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
-    label: 'Label',
+    enabled: true,
     onChange: fn(),
+    label: 'Label',
   },
 };
