@@ -11,9 +11,9 @@ const meta = {
   tags: ['autodocs'],
   args: {
     items: [
-      { label: 'First item', name: 'first', onChange: fn() },
-      { label: 'Second item', name: 'second', checked: true, onChange: fn() },
-      { label: 'Third item', name: 'third', onChange: fn() },
+      { label: 'First item', value: 'first', onChange: fn() },
+      { label: 'Second item', value: 'second', onChange: fn() },
+      { label: 'Third item', value: 'third', onChange: fn() },
     ],
     legend: 'This is radio list',
   },
@@ -26,9 +26,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     items: [
-      { label: 'First item', name: 'first', onChange: fn() },
-      { label: 'Second item', name: 'second', checked: true, onChange: fn() },
-      { label: 'Third item', name: 'third', onChange: fn() },
+      { label: 'First item', value: 'first', onChange: fn() },
+      { label: 'Second item', value: 'second', onChange: fn() },
+      { label: 'Third item', value: 'third', onChange: fn() },
     ],
     legend: 'This is radio list',
   },
